@@ -33,34 +33,8 @@ on_monthly_pulse = {
 		root = {
 			if = {
 				limit = { is_alive = yes }
-				if = {
-					limit = {
-						NOR = {
-							has_character_flag = race_aldmeri
-							has_character_flag = race_bosmeri
-							has_character_flag = race_dunmeri
-							has_character_flag = race_orsimer
-							has_character_flag = race_atmoran
-							has_character_flag = race_breton
-							has_character_flag = race_cyrodiilic
-							has_character_flag = race_yokudan
-							has_character_flag = race_tsaesci
-							has_character_flag = race_khajiit
-							has_character_flag = race_argonian
-							has_character_flag = race_lilmothiit
-							has_character_flag = race_imga
-							has_character_flag = race_minotaur
-							has_character_flag = race_giant
-							has_character_flag = race_goblinken
-							has_character_flag = race_daedra
-							has_character_flag = race_faun
-							has_character_flag = race_echmer
-							has_character_flag = race_kapotun
-							has_character_flag = race_tangmo
-						}
-					}
-					race_traits_effect = yes
-				}
+				clear_race_flags_effect = yes
+				race_traits_effect = yes
 				ek_assign_lore_height_trait_effect = yes
 			}
 		}
