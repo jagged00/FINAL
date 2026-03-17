@@ -1,0 +1,4 @@
+ek_height_scheme_monster_race_modifier = {
+	# Helps tone down romance/court social bias effects where they are lore-odd for certain beast/monster races.
+	attraction_opinion = -35
+}
