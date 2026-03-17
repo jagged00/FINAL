@@ -1,0 +1,265 @@
+﻿@neg1_min = 0.45
+@neg1_max = 0.55
+
+@neg2_min = 0.4
+@neg2_max = 0.6
+
+@neg3_min = 0.35
+@neg3_max = 0.65
+
+@pos1_min = 0.5
+@pos1_max = 0.6
+
+@pos2_min = 0.6
+@pos2_max = 0.7
+
+@pos3_min = 0.7
+@pos3_max = 0.9
+
+@beauty1min = 0.0
+@beauty1max = 0.0
+
+@beauty2min = 0.0
+@beauty2max = 0.0
+
+@beauty3min = 0.0
+@beauty3max = 0.0
+
+@blend1min = 0.0
+@blend1max = 0.2
+
+@blend2min = 0.2
+@blend2max = 0.5
+
+@blend3min = 0.5
+@blend3max = 0.8
+
+race_echmer = {
+	template = "race_falmer"
+	using = "falmer"
+
+	#hair_color = {
+		#10 = { 0.0 0.92 0.3 1.0 }
+	#}
+
+	gene_height = {
+		2 = { name = normal_height		range = { 0.55 0.59 }		} #altmer short 	(-0.2)
+		12 = { name = normal_height		range = { 0.59 0.61 }		} #altmer		
+		4 = { name = normal_height		range = { 0.61 0.63 }		} #altmer tall		(+0.2)
+		1 = { name = normal_height		range = { 0.63 0.68 }		} #altmer very tall (+0.2)
+	}
+
+	eye_color = {
+		#Red eyes
+		#10 = { 0.0 0.15 0.0 0.5 }
+		10 = { 0.0 0.13 0.0 0.5 } # Red eyes 
+		# black  eyes
+		40 = { 0.35 1.0 1.0 1.0 }  
+
+	}
+
+	gene_age = {
+		5 = { name =  old_1	range = { 0.1 0.5 } }
+		5 = { name =  old_2	range = { 0.1 0.5 } }
+		5 = { name =  old_3	range = { 0.1 0.5 } }
+		5 = { name =  old_4	range = { 0.1 0.5 } }
+	}
+
+	eye_sclera = {
+		10 = {	name = black_sclera			range = { 0.0 0.0 }	}
+	}
+
+	eye_pupil = {
+		10 = {	name = frog_pupils			range = { 0.1 0.1 }	}
+	}
+
+	eye_color_saturation = {
+		100 = { name = eye_color_saturation	 range = { 0.6 0.6 }	  }
+	}
+
+	gene_eye_shut = {
+		80 = { name = eye_shut_neg	range = { 0.4 0.6 } }
+		10 = { name = eye_shut_neg	range = { 0.25 0.4 }	}
+		10 = { name = eye_shut_neg	range = { 0.1 0.25 }	}
+		10 = { name = eye_shut_neg	range = { 0.4 0.6 }	}
+
+		#Beauty Section
+		0 = { name = eye_shut_neg	range = { 0.3 0.4 }	traits = { beauty_1 }	}
+		0 = { name = eye_shut_neg	range = { 0.3 0.4 }	traits = { beauty_2 }	}
+		0 = { name = eye_shut_neg	range = { 0.3 0.4 }	traits = { beauty_3 }	}
+	}
+
+	beast_head_attachment_03 = {
+		10 = {	name = riekling_whiskers	range = { 0.7 0.7 }	}
+		5 = {	name = no_attachment_03		range = { 0.0 1.0 }	}
+	}
+	
+	race_gene_hunchbacked = {
+		10 = { name = no_hunchback    range = {0.5 0.5 } }
+		#10 = { name = hunchbacked	range = { 0.01 0.01 } }
+	}
+	
+	eyelashes_accessory = {
+		20 = { name = no_eyelashes	range = { 1.0 1.0 }	}
+	}
+	
+	race_gene_skin_metallic = {
+		1 = { name = metallic_skin				range = { 0.24 0.24 } }
+	}
+
+	race_gene_skin_color = {
+		6 = { name = dwemer_skin		range = { 0.0 1.0 } }
+	}
+
+	khajiit_fangs = {
+		10 = {  name = khajiit_fang_length			range = { 0.99 1.0 }	}
+	}
+
+	beast_teeth_tusks = {
+		10 = {  name = khajiit_tusk_size			range = { 0.05 0.05 }	}
+	}
+
+	leg_shape = {
+		1 = { name = argonian_digitigrade_legs range = { 0.0 0.1 } }
+	}
+
+	body_feathers = {
+        1 = { name = argonian_feathers          range = { 0.0 1.0 } }
+    }
+
+	race_gene_mer_forehead = {
+		1 = { name = dremora_face			range = { 0.7 0.8 } }
+	}
+
+	beast_race_decal_layer_02 = { # White Splotch on Face
+		1 = {  name = khajiit_shading			range = { 0.7 0.7 }	}
+	}
+
+	beast_race_decal_layer_03 = {
+		#1 = {  name = khajiit_patterns			range = { 0.0 0.0 }	}
+		#3 = {  name = khajiit_patterns			range = { 0.0 1.0 }	}
+		3 = {  name = khajiit_patterns			range = { 0.6 0.6 }	}
+	}
+
+	#beast_race_decal_layer_04 = {
+		#1 = {  name = khajiit_pointing			range = { 0.0 0.0 }	}
+		#1 = {  name = khajiit_pointing			range = { 1.0 1.0 }	}
+	#}
+
+	#beast_race_decal_layer_05 = {
+		#1 = {  name = khajiit_white			range = { 1.0 1.0 }	}
+	#}
+
+	race_khajiit_ear_tufts = {
+		1 = {  name = khajiit_ear_tufts			range = { 1.0 1.0 }	}
+	}
+
+	race_gene_mer_nose = {
+		1 = { name = orc_nose			range = { 0.6 1.0 } }
+	}
+
+	vampire_teeth = {
+		10 = {  name = vampire_teeth		range = { 0.0 1.0 }	}
+	}
+
+	complexion = {
+		10 = {	name = complexion_lilmothiit			range = { 0.95 1.0 }		}
+	}
+
+	gene_forehead_width = {
+		1 = {  name = forehead_width_neg		range = { 1.0 1.0 }	}
+	}
+
+	race_gene_mer_ears_01 = {
+		1 = {  name = mer_ears_01		range = { 0.9 1.0 }	}
+		1 = {  name = mer_ears_02		range = { 0.9 1.0 }	}
+	}
+
+	race_gene_mer_ears_02 = {
+		1 = {  name = mer_ears_02		range = { 1.0 1.0 }	}
+	}
+
+	gene_bs_ear_lobe = {
+		1 = {  name = ear_lobe_fused		range = { 0.0 0.1 }	}
+	}
+
+	gene_bs_ears_fantasy = {
+		1 = {  name = vanilla_ears_fantasy		range = { 0.47 0.52 }	}
+	}
+
+	gene_bs_ear_angle = {
+		1 = {  name = ear_angle_pos		range = { 0.0 0.15 }	}
+	}
+
+	gene_bs_ear_inner_shape = {
+		1 = {  name = ear_inner_shape_pos		range = { 0.9 1.0 }	}
+	}
+
+	gene_bs_ear_bend = {
+		1 = {  name = ear_both_bend_pos		range = { 0.9 1.0 }	}
+	}
+
+	gene_bs_ear_outward = {
+		1 = {  name = ear_outward_pos		range = { 0.9 1.0 }	}
+	}
+
+	gene_bs_ear_size = {
+		1 = {  name = ear_size_pos		range = { 1.0 1.0 }	}
+	}
+
+	gene_mouth_open = {
+        100 = { name = mouth_open_neg    range = { 0.1 0.2 }    }
+		#10 = { name = mouth_open_pos    range = { 0.7 0.99 }
+    }
+
+	race_argonian_snake_hood = {
+        10 = { name = naga_snake_hood_01    range = { 0.1 0.1 }    }
+    }
+
+	gene_bs_nose_tip_angle = {
+        10 = { name = nose_tip_angle_pos    range = { 0.41 0.41 }    }
+    }
+
+	jaw_open = {
+        10 = { name = jaw_open_pos    range = { 0.5 0.5 }    }
+    }
+
+	gene_bs_body_type = {
+
+		# 0 = { name = body_average 	range = { 0.0 0.0 }		 }
+        5 = { name = body_fat_head_fat_low   range = { 0.4 0.45 }      }
+        25 = { name = body_fat_head_fat_low   range = { 0.45 0.55 }   traits = { beauty_1 beauty_2 beauty_3 }   }
+        5 = { name = body_fat_head_fat_low   range = { 0.55 0.6 }      }
+
+        5 = { name = body_fat_head_fat_medium   range = { 0.4 0.45 }      }
+        25 = { name = body_fat_head_fat_medium   range = { 0.45 0.55 }      }
+        5 = { name = body_fat_head_fat_medium   range = { 0.55 0.6 }      }
+
+        5 = { name = body_fat_head_fat_full   range = { 0.4 0.45 }      }
+        25 = { name = body_fat_head_fat_full   range = {0.45 0.55 }      }
+        5 = { name = body_fat_head_fat_full   range = { 0.55 0.6 }      }
+
+	}
+
+	gene_bs_body_shape = {
+		10 = { name = body_shape_average	range = { 0.0 0.0 }	}
+		15 = { name = body_shape_apple_half	range = { 0.0 0.0 }	}
+		5 = { name = body_shape_apple_full	range = { 0.0 0.0 }	}
+		10 = { name = body_shape_hourglass_half	range = { 0.0 0.0 }	}
+		10 = { name = body_shape_hourglass_full	range = { 0.0 0.0 }	}
+		15 = { name = body_shape_rectangle_half	range = { 0.0 0.0 }	}
+		5 = { name = body_shape_rectangle_full	range = { 0.0 0.0 }	}
+		15 = { name = body_shape_triangle_half	range = { 0.0 0.0 }	}
+		5 = { name = body_shape_triangle_full	range = { 0.0 0.0 }	}
+
+		10 = { name = body_shape_average	range = { 0.0 0.15 }	}
+		15 = { name = body_shape_apple_half	range = { 0.0 0.15 }	}
+		5 = { name = body_shape_apple_full	range = { 0.0 0.15 }	}
+		10 = { name = body_shape_hourglass_half	range = { 0.0 0.15 }	}
+		10 = { name = body_shape_hourglass_full	range = { 0.0 0.15 }	}
+		15 = { name = body_shape_rectangle_half	range = { 0.0 0.15 }	}
+		5 = { name = body_shape_rectangle_full	range = { 0.0 0.15 }	}
+		15 = { name = body_shape_triangle_half	range = { 0.0 0.15 }	}
+		5 = { name = body_shape_triangle_full	range = { 0.0 0.15 }	}
+	}
+}

@@ -1,0 +1,115 @@
+﻿@neg1_min = 0.4
+@neg1_max = 0.5
+
+@neg2_min = 0.3
+@neg2_max = 0.4
+
+@neg3_min = 0.1
+@neg3_max = 0.3
+
+@pos1_min = 0.5
+@pos1_max = 0.6
+
+@pos2_min = 0.6
+@pos2_max = 0.7
+
+@pos3_min = 0.7
+@pos3_max = 0.9
+
+@beauty1min = 0.35
+@beauty1max = 0.65
+
+@beauty2min = 0.38
+@beauty2max = 0.62
+
+@beauty3min = 0.41
+@beauty3max = 0.59
+
+@blend1min = 0.0
+@blend1max = 0.2
+
+@blend2min = 0.2
+@blend2max = 0.5
+
+@blend3min = 0.5
+@blend3max = 0.8
+
+@mid_point_neutral = 0.5
+@low_point_neutral = 0.0
+
+######################
+####   TSAESCI    ####
+######################
+
+race_keptuquey = {
+
+    template = "race_akaviri_tsaesci_4"
+    using = "keptuquey"
+	
+    hair_color = {
+		50 = { 0.01 0.9 0.05 1.0 }
+		50 = { 0.05 0.95 0.1 0.99 }
+        10 = { 0.65 0.8 0.9 0.95 }
+		# # Red
+		1 = { 0.85 0.45 1.0 0.8 }
+		## Black
+		40 = { 0.0 0.9 0.5 1.0 }
+	}
+
+    skin_color = {
+		10 = { 0.4 0.7 0.7 0.85 }
+		10 = { 0.1 0.7 0.5 0.9 }
+		10 = { 0.3 0.6 0.6 0.82 }
+		10 = { 0.1 0.6 0.6 0.82 }
+	}
+
+      gene_hair_type = {
+        33 = {  name = hair_straight             range = { 0.35 0.75 }     }
+        33 = {  name = hair_wavy             range = { 0.35 0.75 }     }
+        0 = {  name = hair_curly             range = { 0.35 0.75 }     }
+        0 = {  name = hair_afro             range = { 0.35 0.75 }     }
+        33 = {  name = hair_straight_thin_beard             range = { 0.35 0.75 }     }
+    }
+
+    eye_pupil = {
+		50 = { name = human_pupils			range = { 0.0 0.05 } }
+		1 = { name = large_pupils			range = { 0.0 0.1 } }
+	}
+}
+
+race_keptuquey_2 = { # Chimeriquey intermixing
+
+    template = "race_keptuquey"
+    using = "keptuquey"
+
+	skin_color = {
+		10 = { 0.4 0.7 0.7 0.85 }
+		10 = { 0.1 0.7 0.5 0.9 }
+		10 = { 0.3 0.6 0.6 0.82 }
+		10 = { 0.1 0.6 0.6 0.82 }
+		40 = { 0.7 0.3 1.0 0.5 }
+	}
+
+    eye_pupil = {
+		40 = { name = human_pupils			range = { 0.0 0.05 } }
+		5 = { name = large_pupils			range = { 0.0 0.1 } }
+	}
+	
+	race_gene_mer_forehead = {
+		10 = { name = mer_forehead			range = { 0.3 0.6 } }
+		1 = { name = mer_forehead			range = { 0.6 0.9 } }			
+	}
+	
+	race_gene_mer_ears_01 = {
+		5 = {	name = mer_ears_02			range = { 0.2 0.6 }	}
+	}
+	race_gene_mer_ears_02 = {
+		5 = {	name = mer_ears_02			range = { 0.2 0.6 }	}
+	}
+	
+	race_gene_mer_eyebrows_01 = {
+		5 = {	name = mer_eyebrows_01			range = { 0.2 0.4 }	}
+	}
+
+    ###################
+}

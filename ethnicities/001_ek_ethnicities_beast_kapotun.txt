@@ -1,0 +1,251 @@
+﻿# Receives data from /genes
+# Ethnicity templates are used in other ethnicities and templates in this folder
+
+race_kapotun = {
+	template = "race_khajiit_wildcat"
+	using = "kapotun"
+	visible = yes
+
+	skin_color = {
+		#Full shade spectrum
+		30 = { 0.0 0.7 1.0 1.0 }
+	}
+
+	hair_color = {
+		#10 = { 0.75 0.2 0.85 0.52 }
+		10 = { 0.7 0.2 0.8 0.42 }
+	}
+
+	eye_color = {
+		#yellow
+		20 = { 0.3 0.1 0.4 0.4 }	
+	}
+
+	hair_color_hue = {
+        100 = { name = hair_color_100_saturation      range = { 0.98 1.0 } }
+    }
+
+	hair_aging = {
+        1 = {  name = no_hair_aging                 range = { 0.0 0.0 }     }
+    }
+
+	eye_L_accessory = {
+        100 = { name = normal_eye      range = { 0.0 1.0 } }
+    }
+
+	gene_eye_shut_top = {
+        5 = {  name = eye_shut_top            range = { 0.05 0.95 }     }
+    }
+
+	eye_pupil = {
+		#10 = {	name = argonian_pupils			range = { 0.10 0.15 }	}
+		#10 = {	name = khajiit_pupils			range = { 0.1 0.1 }	}
+		10 = {	name = khajiit_pupils			range = { 0.5 0.5 }	}
+	}
+
+	eye_sclera = {
+		#10 = {	name = human_sclera			range = { 0.0 0.0 }	}
+		10 = {	name = black_sclera			range = { 0.0 0.0 }	}
+	}
+
+	gene_eye_angle = {
+		10 = {	name = eye_angle_pos			range = { 0.67 0.75 }	}
+	}
+
+	skin_color_hue = {
+		20 = { name = vanilla_skin_hue		range = { 0.3 0.3 } }
+	}
+
+	skin_color_saturation = {
+		1 = { name = vanilla_skin_saturation		range = { 0.40 0.70 } }
+	}
+	beast_race_decal_layer_01 = {
+		1 = {  name = no_decal_01			range = { 0.0 1.0 }	}
+	}
+
+	beast_race_decal_layer_02 = {
+		#1 = {  name = khajiit_shading			range = { 0.84 0.86 }	}
+		1 = {  name = khajiit_shading			range = { 0.84 0.86 }	}
+	}
+
+	beast_race_decal_layer_03 = {
+		#1 = {  name = khajiit_patterns			range = { 0.77 0.78 }	} # maybe?
+		1 = {  name = khajiit_patterns			range = { 0.69 0.69 }	}
+	}
+
+	beast_race_decal_layer_04 = {
+		1 = {  name = khajiit_pointing			range = { 0.0 0.0 }	}
+	}
+
+	beast_race_decal_layer_05 = {
+		1 = {  name = khajiit_white			range = { 0.12 0.13 }	}
+	#	1 = {  name = khajiit_white			range = { 0.0 1.0 }	}
+	}
+
+	gene_height = {
+		2 = { name = normal_height		range = { 0.62 0.69 }		} #khajiit short 	(-0.2)
+		12 = { name = normal_height		range = { 0.69 0.72 }		} #khajiit		
+		4 = { name = normal_height		range = { 0.72 0.75 }		} #khajiit tall		(+0.2)
+		1 = { name = normal_height		range = { 0.75 0.79 }		} #khajiit very tall (+0.2)
+	}
+
+	 gene_bs_body_shape = {
+        5 = { name = body_shape_average     range = { 0.95 0.99 }      }
+        #5 = { name = body_shape_apple_half     range = { 0.9 0.99 }      }
+        # 5 = { name = body_shape_apple_full     range = { 0.0 0.2 }      }
+        15 = { name = body_shape_hourglass_half     range = { 0.95 0.99 }      }
+        15 = { name = body_shape_hourglass_full     range = { 0.95 0.99 }      }
+        #10 = { name = body_shape_pear_half     range = { 0.9 0.99 }      }
+        #10 = { name = body_shape_pear_full     range = { 0.9 0.99 }      }
+        5 = { name = body_shape_rectangle_half     range = { 0.95 0.99 }      }
+        1 = { name = body_shape_rectangle_full     range = { 0.95 0.99 }      }
+        20 = { name = body_shape_triangle_half     range = { 0.95 0.99 }      }
+        20 = { name = body_shape_triangle_full     range = { 0.95 0.99 }      }
+    }
+
+	gene_bs_body_type = {
+		# 0 = { name = body_average 	range = { 0.0 0.0 }		}
+		5 = { name = body_fat_head_fat_low	range = { 0.4 0.75 }	}
+		25 = { name = body_fat_head_fat_low	range = { 0.45 0.75 }	traits = { beauty_1 beauty_2 beauty_3 }	}
+		5 = { name = body_fat_head_fat_low	range = { 0.55 0.7 }	}
+
+		#5 = { name = body_fat_head_fat_medium	range = { 0.4 0.45 }	}
+		#25 = { name = body_fat_head_fat_medium	range = { 0.45 0.55 }	}
+		#5 = { name = body_fat_head_fat_medium	range = { 0.55 0.6 }	}
+
+		#5 = { name = body_fat_head_fat_full	range = { 0.4 0.45 }	}
+		#25 = { name = body_fat_head_fat_full	range = {0.45 0.55 }	}
+		#5 = { name = body_fat_head_fat_full	range = { 0.55 0.6 }	}
+	}
+
+	gene_bs_bust = { #teehee
+		10 = { name = bust_default	range = { 0.85 1.0 }	}
+		10 = { name = bust_shape_1_full	range = { 0.75 1.0 }	}
+		10 = { name = bust_shape_2_half	range = { 0.75 1.0 }	}
+		10 = { name = bust_shape_2_full	range = { 0.75 1.0 }	}
+		10 = { name = bust_shape_3_half	range = { 0.75 1.0 }	}
+		10 = { name = bust_shape_3_full	range = { 0.75 1.0 }	}
+		10 = { name = bust_shape_4_half	range = { 0.75 1.0 }	}
+		10 = { name = bust_shape_4_full	range = { 0.75 1.0 }	}
+	}
+
+	#
+
+	gene_head_width = {
+		25 = { name = head_width_neg	range = { 0.30 0.99 }	}
+	}
+
+	gene_forehead_height = {
+		25 = { name = forehead_height_neg	range = { 0.0 0.1 }	}
+	}
+
+	gene_bs_head_lower_height = {
+		25 = { name = head_lower_height_min		range = { 0.6 1.0 }	}
+	}
+
+	complexion = {
+		10 = {	name = complexion_khajiit			range = { 1.0 1.0 }		}
+	}
+ 
+	race_khajiit_ear_tufts = { # questionable
+		1 = {  name = no_ear_tufts			range = { 1.0 1.0 }	}
+	}
+
+	gene_bs_ear_lobe = {
+		1 = {  name = ear_lobe_fused		range = { 0.0 0.1 }	}
+	}
+
+	gene_bs_ears_fantasy = {
+		1 = {  name = vanilla_ears_fantasy		range = { 0.47 0.52 }	}
+	}
+
+	gene_bs_ear_angle = {
+		1 = {  name = ear_angle_neg		range = { 0.85 1.0 }	}
+	}
+
+	gene_bs_ear_inner_shape = {
+		1 = {  name = ear_inner_shape_pos		range = { 0.0 0.0 }	}
+	}
+
+	gene_bs_ear_bend = {
+		1 = {  name = ear_lower_bend_pos		range = { 0.95 1.0 }	}
+	}
+
+	gene_bs_ear_outward = {
+		#1 = {  name = ear_outward_neg		range = { 0.95 1.0 }	}
+		1 = {  name = ear_outward_pos		range = { 0.6 0.85 }	}
+	}
+
+	gene_bs_ear_size = {
+		#1 = {  name = ear_size_pos		range = { 0.95 1.0 }	}
+		1 = {  name = ear_size_neg		range = { 0.5 1.0 }	}
+	}
+
+	#
+
+	race_gene_mer_ears_01 = {
+		1 = {  name = mer_ears_03		range = { 0.0 0.1 }	}
+	}
+
+	race_gene_mer_ears_02 = {
+		1 = {  name = mer_ears_03		range = { 0.0 0.1 }	}
+	}
+
+	#gene_bs_mouth_glamour_lips = {
+		#10 = { name = mouth_glamour_lips		range = { 0.6 0.99 } }
+	#}
+
+	gene_bs_mouth_lower_lip_pad = {
+        #50 = { name = mouth_lower_lip_pad_pos    range = { 0.8 1.0 }    }
+		50 = { name = mouth_lower_lip_pad_neg    range = { 0.0 0.3 }    }
+    }
+
+	gene_bs_forehead_brow_inner_height = {
+		#40 = { name = forehead_brow_inner_height_neg	range = { 0.0 0.7 }	}
+		40 = { name = forehead_brow_inner_height_neg	range = { 0.0 0.3 }	}
+	}
+
+	gene_bs_nose_central_width = {
+        1 = { name = nose_central_width_pos    range = { 0.17 0.2 }    }
+    }
+
+	race_gene_mer_nose = {
+		10 = { name = mer_nose			range = { 0.4 0.6 } }
+	}
+
+	gene_bs_nose_height = {
+        1 = { name = nose_height_neg    range = { 0.7 1.0 }    }
+    }
+
+	gene_bs_nose_ridge_width = {
+        1 = { name = nose_ridge_width_neg    range = { 0.7 1.0 }    }
+    }
+
+	gene_bs_nose_tip_width = {
+        1 = { name = nose_tip_width_pos    range = { 0.1 1.0 }    }
+    }
+
+	gene_bs_nose_nostril_width = {
+        1 = { name = nose_nostril_width_pos    range = { 0.0 0.15 }    }
+    }
+
+	gene_chin_height = {
+        1 = { name = chin_height_pos    range = { 0.25 0.5 }    }
+    }
+
+	gene_chin_forward = {
+        #1 = { name = chin_forward_neg    range = { 0.13 0.16 }    }
+		#1 = { name = chin_forward_neg    range = { 0.0 0.0 }    }
+		1 = { name = chin_forward_neg    range = { 0.4 0.5 }    }
+    }
+
+	gene_head_profile = {
+		1 = { name = head_profile_pos    range = { 0.38 0.41 }    }
+    }
+
+	khajiit_fangs = {
+		10 = {  name = khajiit_fang_length			range = { 0.99 1.0 }	}
+	}
+
+}
+

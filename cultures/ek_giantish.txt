@@ -1,0 +1,35 @@
+﻿tundrastrider = {
+	color = { 0.44 0.54 0.60 }
+	#color = { 0.12 0.32 0.94 }
+	
+	created = 2.1.1
+	history_loc_override = mystery_history_loc
+	
+	ethos = ethos_stoic
+	heritage = heritage_atmoran_giant
+	language = language_atmoran
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+	traditions = {
+		tradition_tundrastrider_core
+		tradition_pastoralists
+		tradition_isolationist
+		tradition_staunch_traditionalists
+		#tradition_concubines
+		tradition_storytellers
+	}
+	
+	name_list = name_list_atmoran_giant
+	
+	#coa_gfx = { norse_coa_gfx nord_group_coa_gfx }
+	coa_gfx = { goblin_group_coa_gfx }
+	building_gfx = { ek_nedic_north_building_gfx }
+	clothing_gfx = { ek_giant_clothing_gfx }
+	unit_gfx = { norse_unit_gfx }
+	house_coa_frame = house_frame_05
+	
+	ethnicities = {
+		#1 = race_giant_1 #EK2's version
+		1 = race_giant #Jam's version
+	}
+}
