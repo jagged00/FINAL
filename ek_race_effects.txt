@@ -22,6 +22,15 @@ ek_character_setup_effect = {
 	if = {
 		limit = { 
 			NOR = { 
+				has_character_flag = race_aldmeri
+				has_character_flag = race_bosmeri
+				has_character_flag = race_dunmeri
+				has_character_flag = race_orsimer
+				has_character_flag = race_atmoran
+				has_character_flag = race_breton
+				has_character_flag = race_cyrodiilic
+				has_character_flag = race_yokudan
+				has_character_flag = race_tsaesci
 				has_character_flag = race_khajiit
 				has_character_flag = race_argonian
 				has_character_flag = race_lilmothiit
@@ -451,6 +460,81 @@ race_traits_effect = {
 		add_character_flag = race_giant
 	}
 
+	#Aldmeri and other tall mer
+	if = {
+		limit = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_aldmeri }
+				culture = { has_cultural_pillar = heritage_ayleid }
+				culture = { has_cultural_pillar = heritage_dwemeri }
+				culture = { has_cultural_pillar = heritage_falmeri }
+				culture = { has_cultural_pillar = heritage_maormeri }
+				culture = { has_cultural_pillar = heritage_sinestral }
+			}
+		}
+		add_character_flag = race_aldmeri
+	}
+
+	#Bosmer
+	if = {
+		limit = { culture = { has_cultural_pillar = heritage_bosmeri } }
+		add_character_flag = race_bosmeri
+	}
+
+	#Dunmer and Chimer
+	if = {
+		limit = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_dunmeri }
+				culture = { has_cultural_pillar = heritage_chimeri }
+			}
+		}
+		add_character_flag = race_dunmeri
+	}
+
+	#Orsimer
+	if = {
+		limit = { culture = { has_cultural_pillar = heritage_orcish } }
+		add_character_flag = race_orsimer
+	}
+
+	#Atmoran men
+	if = {
+		limit = { culture = { has_cultural_pillar = heritage_atmoran } }
+		add_character_flag = race_atmoran
+	}
+
+	#Breton men
+	if = {
+		limit = { culture = { has_cultural_pillar = heritage_breton } }
+		add_character_flag = race_breton
+	}
+
+	#Cyrodiilic men
+	if = {
+		limit = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_cyrodiilic }
+				culture = { has_cultural_pillar = heritage_cyrod }
+				culture = { has_cultural_pillar = heritage_deathlander }
+				culture = { has_cultural_pillar = heritage_kothri }
+			}
+		}
+		add_character_flag = race_cyrodiilic
+	}
+
+	#Yokudan men
+	if = {
+		limit = { culture = { has_cultural_pillar = heritage_yokudan } }
+		add_character_flag = race_yokudan
+	}
+
+	#Tsaesci
+	if = {
+		limit = { culture = { has_cultural_pillar = heritage_tsaesci } }
+		add_character_flag = race_tsaesci
+	}
+
 	#Khajiit
 	if = {
 		limit = { culture = { has_cultural_pillar = heritage_khajiiti } }
@@ -646,6 +730,105 @@ race_traits_inheritance_effect = {
 			}
 		}
 		add_character_flag = race_tangmo
+	}
+
+	# Aldmeri
+	else_if = {
+		limit = {
+			OR = {
+				scope:mother = { has_character_flag = race_aldmeri }
+				scope:real_father = { has_character_flag = race_aldmeri }
+			}
+		}
+		add_character_flag = race_aldmeri
+	}
+
+	# Bosmeri
+	else_if = {
+		limit = {
+			OR = {
+				scope:mother = { has_character_flag = race_bosmeri }
+				scope:real_father = { has_character_flag = race_bosmeri }
+			}
+		}
+		add_character_flag = race_bosmeri
+	}
+
+	# Dunmeri
+	else_if = {
+		limit = {
+			OR = {
+				scope:mother = { has_character_flag = race_dunmeri }
+				scope:real_father = { has_character_flag = race_dunmeri }
+			}
+		}
+		add_character_flag = race_dunmeri
+	}
+
+	# Orsimer
+	else_if = {
+		limit = {
+			OR = {
+				scope:mother = { has_character_flag = race_orsimer }
+				scope:real_father = { has_character_flag = race_orsimer }
+			}
+		}
+		add_character_flag = race_orsimer
+	}
+
+	# Atmoran
+	else_if = {
+		limit = {
+			OR = {
+				scope:mother = { has_character_flag = race_atmoran }
+				scope:real_father = { has_character_flag = race_atmoran }
+			}
+		}
+		add_character_flag = race_atmoran
+	}
+
+	# Breton
+	else_if = {
+		limit = {
+			OR = {
+				scope:mother = { has_character_flag = race_breton }
+				scope:real_father = { has_character_flag = race_breton }
+			}
+		}
+		add_character_flag = race_breton
+	}
+
+	# Cyrodiilic
+	else_if = {
+		limit = {
+			OR = {
+				scope:mother = { has_character_flag = race_cyrodiilic }
+				scope:real_father = { has_character_flag = race_cyrodiilic }
+			}
+		}
+		add_character_flag = race_cyrodiilic
+	}
+
+	# Yokudan
+	else_if = {
+		limit = {
+			OR = {
+				scope:mother = { has_character_flag = race_yokudan }
+				scope:real_father = { has_character_flag = race_yokudan }
+			}
+		}
+		add_character_flag = race_yokudan
+	}
+
+	# Tsaesci
+	else_if = {
+		limit = {
+			OR = {
+				scope:mother = { has_character_flag = race_tsaesci }
+				scope:real_father = { has_character_flag = race_tsaesci }
+			}
+		}
+		add_character_flag = race_tsaesci
 	}
 
 	add_character_flag = char_setup
@@ -1589,19 +1772,16 @@ ek_assign_lore_height_trait_effect = {
 
 	if = {
 		limit = {
-			OR = {
-				culture = { has_cultural_pillar = heritage_goblinken }
-				has_character_flag = race_goblinken
-			}
+			has_character_flag = race_goblinken
 		}
 		add_trait = short_5
 	}
 	else_if = {
 		limit = {
 			OR = {
-				culture = { has_cultural_pillar = heritage_bosmeri }
-				culture = { has_cultural_pillar = heritage_echmer }
-				culture = { has_cultural_pillar = heritage_faun }
+				has_character_flag = race_bosmeri
+				has_character_flag = race_echmer
+				has_character_flag = race_faun
 			}
 		}
 		add_trait = short_2
@@ -1609,32 +1789,24 @@ ek_assign_lore_height_trait_effect = {
 	else_if = {
 		limit = {
 			OR = {
-				culture = { has_cultural_pillar = heritage_breton }
-				culture = { has_cultural_pillar = heritage_khajiiti }
-				culture = { has_cultural_pillar = heritage_lilmothiit }
+				has_character_flag = race_breton
+				has_character_flag = race_khajiit
+				has_character_flag = race_lilmothiit
 			}
 		}
 		add_trait = short_1
 	}
 	else_if = {
 		limit = {
-			OR = {
-				culture = { has_cultural_pillar = heritage_aldmeri }
-				culture = { has_cultural_pillar = heritage_ayleid }
-				culture = { has_cultural_pillar = heritage_dwemeri }
-				culture = { has_cultural_pillar = heritage_falmeri }
-				culture = { has_cultural_pillar = heritage_maormeri }
-				culture = { has_cultural_pillar = heritage_sinestral }
-			}
+			has_character_flag = race_aldmeri
 		}
 		add_trait = tall_4
 	}
 	else_if = {
 		limit = {
 			OR = {
-				culture = { has_cultural_pillar = heritage_atmoran_giant }
 				has_character_flag = race_giant
-				culture = { has_cultural_pillar = heritage_minotaur }
+				has_character_flag = race_minotaur
 			}
 		}
 		add_trait = tall_5
@@ -1642,9 +1814,9 @@ ek_assign_lore_height_trait_effect = {
 	else_if = {
 		limit = {
 			OR = {
-				culture = { has_cultural_pillar = heritage_orcish }
-				culture = { has_cultural_pillar = heritage_imgan }
-				culture = { has_cultural_pillar = heritage_dremora }
+				has_character_flag = race_orsimer
+				has_character_flag = race_imga
+				has_character_flag = race_daedra
 			}
 		}
 		add_trait = tall_2
@@ -1652,8 +1824,8 @@ ek_assign_lore_height_trait_effect = {
 	else_if = {
 		limit = {
 			OR = {
-				culture = { has_cultural_pillar = heritage_atmoran }
-				culture = { has_cultural_pillar = heritage_yokudan }
+				has_character_flag = race_atmoran
+				has_character_flag = race_yokudan
 			}
 		}
 		add_trait = tall_1
@@ -1661,16 +1833,14 @@ ek_assign_lore_height_trait_effect = {
 	else_if = {
 		limit = {
 			OR = {
-				culture = { has_cultural_pillar = heritage_dunmeri }
-				culture = { has_cultural_pillar = heritage_chimeri }
-				culture = { has_cultural_pillar = heritage_tsaesci }
-				culture = { has_cultural_pillar = heritage_kapotun }
-				culture = { has_cultural_pillar = heritage_tangmo }
+				has_character_flag = race_dunmeri
+				has_character_flag = race_tsaesci
+				has_character_flag = race_kapotun
+				has_character_flag = race_tangmo
+				has_character_flag = race_cyrodiilic
+				has_character_flag = race_argonian
 			}
 		}
-		add_trait = average_height
-	}
-	else = {
 		add_trait = average_height
 	}
 }
