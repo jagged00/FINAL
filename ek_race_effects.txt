@@ -1779,6 +1779,9 @@ lifespan_traits_inheritance_effect = {
 	
 # Applies lore-accurate height traits by culture heritage.
 ek_assign_lore_height_trait_effect = {
+	# Reset race-specific social modifier before re-applying it below.
+	remove_character_modifier = ek_height_scheme_monster_race_modifier
+
 	# Clear any existing height trait first.
 	remove_trait = short_1
 	remove_trait = short_2
@@ -1796,7 +1799,10 @@ ek_assign_lore_height_trait_effect = {
 		limit = {
 			has_character_flag = race_goblinken
 		}
-		add_trait = short_5
+		random_list = {
+			80 = { add_trait = short_5 }
+			20 = { add_trait = short_4 }
+		}
 	}
 	else_if = {
 		limit = {
@@ -1806,7 +1812,11 @@ ek_assign_lore_height_trait_effect = {
 				has_character_flag = race_faun
 			}
 		}
-		add_trait = short_2
+		random_list = {
+			25 = { add_trait = short_3 }
+			60 = { add_trait = short_2 }
+			15 = { add_trait = short_1 }
+		}
 	}
 	else_if = {
 		limit = {
@@ -1816,13 +1826,21 @@ ek_assign_lore_height_trait_effect = {
 				has_character_flag = race_lilmothiit
 			}
 		}
-		add_trait = short_1
+		random_list = {
+			15 = { add_trait = short_2 }
+			65 = { add_trait = short_1 }
+			20 = { add_trait = average_height }
+		}
 	}
 	else_if = {
 		limit = {
 			has_character_flag = race_aldmeri
 		}
-		add_trait = tall_4
+		random_list = {
+			20 = { add_trait = tall_3 }
+			65 = { add_trait = tall_4 }
+			15 = { add_trait = tall_5 }
+		}
 	}
 	else_if = {
 		limit = {
@@ -1831,7 +1849,10 @@ ek_assign_lore_height_trait_effect = {
 				has_character_flag = race_minotaur
 			}
 		}
-		add_trait = tall_5
+		random_list = {
+			15 = { add_trait = tall_4 }
+			85 = { add_trait = tall_5 }
+		}
 	}
 	else_if = {
 		limit = {
@@ -1841,7 +1862,11 @@ ek_assign_lore_height_trait_effect = {
 				has_character_flag = race_daedra
 			}
 		}
-		add_trait = tall_2
+		random_list = {
+			20 = { add_trait = tall_1 }
+			60 = { add_trait = tall_2 }
+			20 = { add_trait = tall_3 }
+		}
 	}
 	else_if = {
 		limit = {
@@ -1850,7 +1875,11 @@ ek_assign_lore_height_trait_effect = {
 				has_character_flag = race_yokudan
 			}
 		}
-		add_trait = tall_1
+		random_list = {
+			20 = { add_trait = average_height }
+			60 = { add_trait = tall_1 }
+			20 = { add_trait = tall_2 }
+		}
 	}
 	else_if = {
 		limit = {
@@ -1863,6 +1892,36 @@ ek_assign_lore_height_trait_effect = {
 				has_character_flag = race_argonian
 			}
 		}
-		add_trait = average_height
+		random_list = {
+			20 = { add_trait = short_1 }
+			60 = { add_trait = average_height }
+			20 = { add_trait = tall_1 }
+		}
+	}
+	else = {
+		random_list = {
+			20 = { add_trait = short_1 }
+			60 = { add_trait = average_height }
+			20 = { add_trait = tall_1 }
+		}
+	}
+
+	# Disable part of romance/court social attractiveness scaling for races where it is lore-awkward.
+	if = {
+		limit = {
+			OR = {
+				has_character_flag = race_goblinken
+				has_character_flag = race_giant
+				has_character_flag = race_minotaur
+				has_character_flag = race_faun
+				has_character_flag = race_echmer
+				has_character_flag = race_kapotun
+				has_character_flag = race_tangmo
+				has_character_flag = race_daedra
+			}
+		}
+		add_character_modifier = {
+			modifier = ek_height_scheme_monster_race_modifier
+		}
 	}
 }
