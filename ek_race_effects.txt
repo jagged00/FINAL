@@ -1572,3 +1572,105 @@ lifespan_traits_inheritance_effect = {
 	add_character_flag = char_setup
 }
 	
+# Applies lore-accurate height traits by culture heritage.
+ek_assign_lore_height_trait_effect = {
+	# Clear any existing height trait first.
+	remove_trait = short_1
+	remove_trait = short_2
+	remove_trait = short_3
+	remove_trait = short_4
+	remove_trait = short_5
+	remove_trait = average_height
+	remove_trait = tall_1
+	remove_trait = tall_2
+	remove_trait = tall_3
+	remove_trait = tall_4
+	remove_trait = tall_5
+
+	if = {
+		limit = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_goblinken }
+				has_character_flag = race_goblinken
+			}
+		}
+		add_trait = short_5
+	}
+	else_if = {
+		limit = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_bosmeri }
+				culture = { has_cultural_pillar = heritage_echmer }
+				culture = { has_cultural_pillar = heritage_faun }
+			}
+		}
+		add_trait = short_2
+	}
+	else_if = {
+		limit = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_breton }
+				culture = { has_cultural_pillar = heritage_khajiiti }
+				culture = { has_cultural_pillar = heritage_lilmothiit }
+			}
+		}
+		add_trait = short_1
+	}
+	else_if = {
+		limit = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_aldmeri }
+				culture = { has_cultural_pillar = heritage_ayleid }
+				culture = { has_cultural_pillar = heritage_dwemeri }
+				culture = { has_cultural_pillar = heritage_falmeri }
+				culture = { has_cultural_pillar = heritage_maormeri }
+				culture = { has_cultural_pillar = heritage_sinestral }
+			}
+		}
+		add_trait = tall_4
+	}
+	else_if = {
+		limit = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_atmoran_giant }
+				has_character_flag = race_giant
+				culture = { has_cultural_pillar = heritage_minotaur }
+			}
+		}
+		add_trait = tall_5
+	}
+	else_if = {
+		limit = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_orcish }
+				culture = { has_cultural_pillar = heritage_imgan }
+				culture = { has_cultural_pillar = heritage_dremora }
+			}
+		}
+		add_trait = tall_2
+	}
+	else_if = {
+		limit = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_atmoran }
+				culture = { has_cultural_pillar = heritage_yokudan }
+			}
+		}
+		add_trait = tall_1
+	}
+	else_if = {
+		limit = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_dunmeri }
+				culture = { has_cultural_pillar = heritage_chimeri }
+				culture = { has_cultural_pillar = heritage_tsaesci }
+				culture = { has_cultural_pillar = heritage_kapotun }
+				culture = { has_cultural_pillar = heritage_tangmo }
+			}
+		}
+		add_trait = average_height
+	}
+	else = {
+		add_trait = average_height
+	}
+}
