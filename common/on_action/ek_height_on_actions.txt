@@ -1,0 +1,65 @@
+on_game_start = {
+	on_actions = {
+		ek_apply_lore_height_on_game_start
+	}
+}
+
+on_character_created = {
+	on_actions = {
+		ek_apply_lore_height_on_character_created
+	}
+}
+
+on_birth_child = {
+	on_actions = {
+		ek_apply_lore_height_on_birth
+	}
+}
+
+on_monthly_pulse = {
+	on_actions = {
+		ek_apply_lore_height_on_monthly
+	}
+}
+
+ek_apply_lore_height_on_game_start = {
+	effect = {
+		every_living_character = {
+			race_traits_effect = yes
+			ek_assign_lore_height_trait_effect = yes
+		}
+	}
+}
+
+ek_apply_lore_height_on_character_created = {
+	effect = {
+		root = {
+			race_traits_effect = yes
+			ek_assign_lore_height_trait_effect = yes
+		}
+	}
+}
+
+ek_apply_lore_height_on_birth = {
+	effect = {
+		if = {
+			limit = { exists = scope:child }
+			scope:child = {
+				race_traits_effect = yes
+				ek_assign_lore_height_trait_effect = yes
+			}
+		}
+	}
+}
+
+ek_apply_lore_height_on_monthly = {
+	effect = {
+		root = {
+			if = {
+				limit = { is_alive = yes }
+				race_traits_effect = yes
+				ek_assign_lore_height_trait_effect = yes
+			}
+		}
+	}
+}

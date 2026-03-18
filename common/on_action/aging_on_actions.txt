@@ -1,0 +1,124 @@
+# Visual aging is based on the game's default visual_age gene scale (0 to 1).
+# Only the longest-lived non-immortal lifespan tiers should show visible aging;
+# everyone below that should retain a youthful young-adult appearance.
+
+on_add_visual_age_variable = {
+	trigger = {
+		is_alive = yes
+		NOT = { is_immortal = yes }
+		trigger_if = {
+			limit = { is_alive = yes }
+			NOT = { has_variable = visual_age }
+			NOT = { has_character_flag = is_newborn }
+		}
+	}
+	effect = {
+		set_variable = {
+			name = visual_age
+			value = {
+				if = {
+					limit = {
+						has_trait = beauty_good
+						OR = {
+							has_trait = lifespan_4
+							has_trait = lifespan_magic_4
+							has_trait = lifespan_magic_5
+						}
+						age >= 120
+					}
+					value = age
+					subtract = 120
+					multiply = 0.008
+					min = 0
+					max = 1.5
+				}
+					else = {
+						value = 0
+					}
+			}
+		}
+	}
+}
+
+on_increase_visual_age_variable = {
+	trigger = {
+		is_alive = yes
+		NOT = { is_immortal = yes }
+		trigger_if = {
+			limit = { is_alive = yes }
+			has_variable = visual_age
+			NOT = { has_character_flag = is_newborn }
+		}
+		age > 25
+	}
+	effect = {
+		if = {
+			limit = {
+				has_trait = beauty_good
+				OR = {
+					has_trait = lifespan_4
+					has_trait = lifespan_magic_4
+					has_trait = lifespan_magic_5
+				}
+				age > 120
+			}
+			change_variable = {
+				name = visual_age
+				add = 0.008
+			}
+		}
+			else_if = {
+				limit = {
+					OR = {
+					has_trait = lifespan_4
+					has_trait = lifespan_magic_4
+					has_trait = lifespan_magic_5
+				}
+				age > 90
+			}
+			change_variable = {
+				name = visual_age
+				add = 0.01
+			}
+		}
+			if = {
+			limit = { var:visual_age > 1.5 }
+			remove_variable = visual_age
+			set_variable = {
+				name = visual_age
+				value = 1.5
+			}
+		}
+		if = {
+			limit = {
+				has_trait = infirm
+				var:visual_age < 0.5
+			}
+			remove_trait = infirm
+		}
+	}
+}
+
+on_remove_immortal_age_variable = {
+	trigger = {
+		is_alive = yes
+		is_immortal = yes
+		trigger_if = {
+			limit = { is_alive = yes }
+			OR = {
+				NOT = { has_variable = visual_age }
+				trigger_if = {
+					limit = { has_variable = visual_age }
+					var:visual_age > 0
+				}
+			}
+		}
+	}
+	effect = {
+		remove_variable = visual_age
+		set_variable = {
+			name = visual_age
+			value = 0
+		}
+	}
+}
