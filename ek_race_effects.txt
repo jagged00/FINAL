@@ -450,6 +450,28 @@ racial_blindness_effect = {
 
 #Race traits
 race_traits_effect = {
+	# Ensure only one active race-height flag at a time.
+	remove_character_flag = race_aldmeri
+	remove_character_flag = race_bosmeri
+	remove_character_flag = race_dunmeri
+	remove_character_flag = race_orsimer
+	remove_character_flag = race_atmoran
+	remove_character_flag = race_breton
+	remove_character_flag = race_cyrodiilic
+	remove_character_flag = race_yokudan
+	remove_character_flag = race_tsaesci
+	remove_character_flag = race_khajiit
+	remove_character_flag = race_argonian
+	remove_character_flag = race_lilmothiit
+	remove_character_flag = race_imga
+	remove_character_flag = race_minotaur
+	remove_character_flag = race_giant
+	remove_character_flag = race_goblinken
+	remove_character_flag = race_daedra
+	remove_character_flag = race_faun
+	remove_character_flag = race_echmer
+	remove_character_flag = race_kapotun
+	remove_character_flag = race_tangmo
 
 	#Giants
 	if = {
@@ -631,6 +653,28 @@ race_traits_effect = {
 
 #Race flags inheritance
 race_traits_inheritance_effect = {
+	# Ensure hybrids do not keep multiple race-height flags.
+	remove_character_flag = race_aldmeri
+	remove_character_flag = race_bosmeri
+	remove_character_flag = race_dunmeri
+	remove_character_flag = race_orsimer
+	remove_character_flag = race_atmoran
+	remove_character_flag = race_breton
+	remove_character_flag = race_cyrodiilic
+	remove_character_flag = race_yokudan
+	remove_character_flag = race_tsaesci
+	remove_character_flag = race_khajiit
+	remove_character_flag = race_argonian
+	remove_character_flag = race_lilmothiit
+	remove_character_flag = race_imga
+	remove_character_flag = race_minotaur
+	remove_character_flag = race_giant
+	remove_character_flag = race_goblinken
+	remove_character_flag = race_daedra
+	remove_character_flag = race_faun
+	remove_character_flag = race_echmer
+	remove_character_flag = race_kapotun
+	remove_character_flag = race_tangmo
 	
 	#Khajiit
 	if = {
